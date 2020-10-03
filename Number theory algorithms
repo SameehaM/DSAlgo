@@ -40,8 +40,30 @@ Effective computation of large exponents modulo a number // for every change in 
     return res;
 	}
 fibonnaci,apply permutations k times(just increase the power of permutation to kth power), 	
+
+Name :- SieveOfEratosthenes
+
+Find prime numbers upto n
+
+ll prime[100000]; 
+void SofE(int n) 
+{ 
+    for (int i = 2; i*i <= n; i++)
+    {
+        if (prime[i] == 0) 
+        {
+            for (int j = i*i; j <= n; j += i)
+            {
+                prime[j] = 1;
+            }
+        }
+    }
+    for (int i = 2; i <= n; i++)
+        if(prime[i] == 0)
+          cout<<i<<endl; 
+} 
 	
-	
+Time complexity :-  O(nloglogn)	
 	
 	
 	
