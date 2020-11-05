@@ -1,3 +1,4 @@
+/*--> Brian Kernighan’s Algorithm
 Subtracting 1 from a decimal number flips all the bits after the rightmost set bit(which is 1) including the rightmost set bit.
 for example :
 10 in binary is 00001010
@@ -14,6 +15,7 @@ The beauty of this solution is the number of times it loops is equal to the numb
       (b) Increment count by 1
       (c) go to step 2
    3  Else return count
+   */
    
 // C++ program to Count set 
 // bits in an integer 
@@ -27,7 +29,7 @@ public:
 	{ 
 		unsigned int count = 0; 
 		while (n) { 
-			n &= (n - 1); 
+			n &= (n - 1); // n << 1 can be used too
 			count++; 
 		} 
 		return count; 
