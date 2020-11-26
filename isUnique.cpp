@@ -8,7 +8,7 @@ int main()
     cin>>s;
     ll i,n = s.size();
     sort(s.begin(),s.end());
-    for(i = 0; i < n; i++)                                  // O(nlogn) time complexity.
+    for(i = 0; i < n-1; i++)                                  // O(nlogn) time complexity.
     {
         if(s[i] == s[i+1])
             break;
